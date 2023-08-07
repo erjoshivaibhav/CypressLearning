@@ -1,0 +1,27 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testHeaded": "cypress run --spec cypress/integration/examples/UsingPOM.js --headed --record --key 0f043d2c-7798-45f4-9810-6b4d77d9b075 ",
+    "test": "cypress run --spec cypress/integration/examples/UsingPOM.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cucumber": "^6.0.7",
+    "cypress": "^12.17.3",
+    "multiple-cucumber-html-reporter": "^3.4.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    }
+  }
+}
